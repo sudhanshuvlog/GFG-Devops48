@@ -224,3 +224,154 @@ DevOps is a methodology that fosters collaboration between development and opera
 
 - SaaS Responsibility Model:
     - Cloud provider manages everything, including the application, runtime, middleware, operating system, servers, storage, and networking.
+
+## Virtualization
+
+- Virtualization is a technology that allows a single physical machine (server, desktop, etc.) to run multiple virtual environments, called virtual machines (VMs). Each VM operates as if it were a separate computer with its own operating system (OS), applications, and resources, but in reality, they all share the same underlying hardware.
+
+- Virtualization is achieved through software known as a hypervisor. The hypervisor is responsible for abstracting and allocating the physical resources (CPU, memory, storage) of the host machine to each virtual machine. This enables efficient use of hardware by allowing multiple VMs to run on the same physical machine simultaneously.
+
+- Key Types of Virtualization:
+
+    - Server Virtualization: Allows multiple server instances to run on one physical server.
+      Example: VMware, Hyper-V, KVM.
+
+    - Desktop Virtualization: Provides virtual desktops where multiple users can access separate desktop environments on a single machine.
+    Example: Citrix, VirtualBox.
+
+    - Storage Virtualization: Pools physical storage from multiple devices into what appears to be a single storage device.
+    Example: SAN (Storage Area Network).
+
+    - Network Virtualization: Abstracts physical network resources to create multiple virtual networks on a single physical network infrastructure.
+    Example: Software-Defined Networking (SDN).
+
+## How Virtualization Works
+
+- Physical Machine: The hardware (CPU, RAM, storage) on which multiple virtual machines are deployed.
+- Hypervisor: A layer of software that sits between the hardware and the virtual machines, responsible for  managing and allocating hardware resources to VMs. There are two types of hypervisors:
+    - Type 1 Hypervisor (Bare Metal): Runs directly on the hardware. Examples: VMware ESXi, Microsoft Hyper-V.
+    - Type 2 Hypervisor (Hosted): Runs on top of an existing operating system. Examples: VirtualBox, VMware Workstation.
+- Virtual Machines: Each VM runs its own OS and applications independently of others. All VMs share the physical hardware but are isolated from each other.
+
+- Advantages of Virtualization
+    - Resource Efficiency: Virtualization maximizes the utilization of physical hardware, allowing multiple systems to share resources efficiently.
+    - Cost Savings: Organizations can run multiple virtual servers or desktops on fewer physical machines, reducing hardware costs and energy consumption.
+    - Flexibility and Scalability: Virtual machines can be easily created, modified, or deleted, providing greater flexibility to scale infrastructure as needed.
+    - Isolation: Each VM is isolated from others, which means that if one VM crashes, the others remain unaffected.
+    - Disaster Recovery: Virtual machines can be backed up and migrated easily, simplifying disaster recovery and failover strategies.
+
+## How Virtualization Gave Birth to Cloud Computing
+
+- Cloud computing builds upon the concept of virtualization. Virtualization is the foundation that makes cloud computing possible by enabling resource sharing, abstraction, and flexible scaling. Here’s how virtualization paved the way for cloud computing:
+
+1. Efficient Resource Utilization:
+Before virtualization, servers were typically underutilized, running one application per machine, leading to significant waste of computing power. Virtualization allowed multiple applications to run on the same hardware, maximizing efficiency. This same principle is extended in cloud computing, where cloud providers can pool and allocate resources dynamically across multiple clients.
+
+2. On-Demand Resource Allocation:
+Virtualization enables on-demand provisioning of virtual machines and resources. This dynamic allocation of resources is one of the core principles of cloud computing, where users can request compute, storage, and network resources whenever needed, without having to own the physical infrastructure.
+
+3. Scalability and Elasticity:
+Virtual machines can be easily scaled up (more resources) or down (fewer resources) based on demand. Cloud computing takes this to the next level by offering elasticity, where resources are automatically adjusted in real-time according to the needs of an application. This is possible because virtualization allows the underlying infrastructure to be flexible and adaptable.
+
+4. Abstraction of Physical Hardware:
+Virtualization abstracts the physical hardware from the software running on it, which is central to cloud computing. Cloud users do not need to know or manage the physical hardware their applications are running on. The cloud provider uses virtualization to abstract and allocate resources transparently.
+
+5. Multi-Tenancy:
+Virtualization allows multiple virtual machines (and by extension, multiple users) to share the same physical hardware without interference. This ability to host multiple clients on shared infrastructure is a cornerstone of public cloud services, where cloud providers can serve many customers using shared hardware, while keeping their environments isolated.
+
+6. Disaster Recovery and Backup:
+Virtualization enables easy backup and migration of virtual machines, simplifying disaster recovery. Cloud providers leverage this feature to offer high availability, redundancy, and failover capabilities without the need for users to manage complex recovery infrastructure.
+
+7. Cost Savings via Pay-as-You-Go:
+Virtualization reduced the cost of hardware, and cloud computing extended this by allowing users to pay only for the resources they consume. Cloud providers can offer this model because virtualization makes it easy to allocate and track resource usage, enabling the pay-as-you-go pricing that defines cloud services.
+
+## Evolution: From Virtualization to Cloud Computing
+
+- Data Centers: Virtualization started within data centers, where organizations used it to consolidate hardware and reduce costs. They could run multiple applications on fewer machines.
+
+- Cloud Service Providers: Public cloud providers (AWS, Azure, Google Cloud) built upon virtualization technology to offer cloud services, where organizations no longer need to manage their own physical hardware. They can rent computing resources on-demand.
+
+- Infrastructure as a Service (IaaS): Virtualization enabled the Infrastructure as a Service (IaaS) model, where users can rent virtual machines, storage, and networks over the internet. Virtual machines in the cloud are essentially the same as those created with local virtualization, but now they can be accessed remotely and scaled dynamically.
+
+## Git
+
+### What is Git?
+
+Git is a version control system that tracks changes in your code, allowing you to manage and collaborate on software projects more effectively.
+
+### Why Git?
+
+Git is essential for storing code, tracking changes, and enabling collaboration between multiple developers in a project.
+
+---
+
+## Linux
+
+### What is Linux OS?
+
+Linux is a free, open-source operating system known for its security, flexibility, and stability. It is widely used on servers, desktops, and mobile devices.
+
+### Basic Linux Commands
+
+- **pwd**: Prints the current working directory.
+- **ls**: Lists files and directories.
+- **cd**: Changes the directory.
+- **mkdir**: Creates a directory.
+- **touch**: Creates a file.
+- **cat**: Prints the content of a file.
+- **id**: Prints user and group IDs.
+
+### Linux File System
+
+All files and directories in Linux are organized under the root directory (/), which forms the base of the entire file system hierarchy.
+
+### How to Install Linux OS (Any Distribution)?
+
+1. **Bare Metal**: Install Linux OS directly on the hardware.
+2. **Virtualization**: Install Linux OS on a virtual machine using tools like VirtualBox or Hyper-V.
+3. **Cloud**: Install Linux OS on the cloud using providers like AWS, Azure, or GCP.
+4. **Container**: Install Linux OS on containers using tools like Docker or Kubernetes.
+
+### Hosting Apache HTTPD Web Server on Redhat Linux OS
+
+- Use the below command to install Apache web server on Linux OS:
+```
+sudo yum install -y httpd
+```
+
+- Use the below Command to edit the index.html file:
+```
+sudo vi /var/www/html/index.html
+```
+
+- Use the below command to start the Apache web server:
+```
+sudo systemctl start httpd
+```
+
+- Use the below command to stop the Apache web server:
+```
+sudo systemctl stop httpd
+```
+
+### vi editor
+
+- Use the below command to edit the file using vi editor:
+```
+vi <file-name>
+```
+
+- Use the below command to insert the text in the file:
+```
+i
+```
+
+- Use the below command to save the file:
+```
+:wq
+```
+
+- Use the below command to exit from the file without saving the file:
+```
+:q!
+```
