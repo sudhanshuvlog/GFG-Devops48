@@ -1,4 +1,4 @@
-## Key Outcomes
+## Key Outcomes (AI GENERATED!)
 
 This session covered foundational DevOps concepts including the software development lifecycle, virtualization, cloud computing via AWS, and hands-on Linux server setup. Students created an AWS EC2 instance, connected via SSH key-based authentication, installed Apache HTTPD, and deployed a basic static web server. Core concepts of port numbers, processes, and package management were explained in depth. 
 ## Decisions Made
