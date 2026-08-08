@@ -1,0 +1,8 @@
+[Unit]
+Description=GFG python server
+
+[Service]
+
+ExecStart= python3 /app.py
+MemoryLimit=150M
+CPUShares=1024

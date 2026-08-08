@@ -1,0 +1,8 @@
+[Unit]
+
+Description=constraint for all the users in this server. collectively they can use only 150mb memory and 30% cpu time
+
+[Slice]
+
+MemoryMax=150M
+CPUQuota=30%

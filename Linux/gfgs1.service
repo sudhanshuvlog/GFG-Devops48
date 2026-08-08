@@ -1,0 +1,8 @@
+[Unit]
+Description=GFG CPU Stress Command
+
+[Service]
+
+ExecStart= dd if=/dev/zero of=/dev/null
+MemoryLimit=150M
+CPUShares=1024
