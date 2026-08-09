@@ -1,4 +1,4 @@
-## Concept
+## Concept (AI Generated !)
 
 - **CGroup (Control Group):** A Linux kernel feature that allows resource constraints (CPU, memory, network) to be applied per-user or per-process, preventing any single user/program from consuming all available system resources. 
 - **System Slice vs. User Slice:** All processes are divided into two groups — **system slice** (processes managed by SystemD) and **user slice** (arbitrary processes run by users from terminal sessions). 
