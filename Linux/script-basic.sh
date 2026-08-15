@@ -14,5 +14,4 @@ names=$@
 for name in $names
 do
         echo " hi $name" 
-done
-~      
+done    
