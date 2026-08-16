@@ -1,0 +1,44 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "manageec2",
+			"Effect": "Allow",
+			"Action": [
+				"ec2:CreateSecurityGroup",
+				"ec2:AuthorizeSecurityGroupIngress",
+				"ec2:RunInstances",
+				"ec2:CreateTags",
+				"ec2:TerminateInstances"
+			],
+			"Resource": [
+				"*"
+			]
+		},
+		{
+			"Sid": "denystatement",
+			"Effect": "Deny",
+			"Action": [
+				"ec2:RunInstances"
+			],
+			"Resource": [
+				"*"
+			]
+		},
+		{
+			"Sid": "manages3",
+			"Effect": "Allow",
+			"Action": [
+				"s3:ListAllMyBuckets",
+				"s3:CreateBucket",
+				"s3:PutEncryptionConfiguration",
+				"s3:ListBucket",
+				"s3:*",
+				"access-analyzer:ValidatePolicy"
+			],
+			"Resource": [
+				"*"
+			]
+		}
+	]
+}
