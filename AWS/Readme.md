@@ -1,6 +1,6 @@
 ## AWS
 
-* Create `aws-access-analyzer policy` and assign it to the user from which you are trying to use s3 service(while adding s3 bucket policy)
+* Create `aws-access-analyzer.json` and assign it to the user from which you are trying to use s3 service(while adding s3 bucket policy)
 
 ### AWS CLI Commands
 
@@ -9,3 +9,10 @@
 * List S3 Buckets - `aws s3 ls`
 * AWS Ec2 Describe Instance - `aws ec2 describe-instances`
 * Create presigned URL for accessing object stored in s3 - `aws s3 presign s3://gfg33/lion.jpeg --expires-in 3000`
+* Cloudwatch alarm- ![cloud-watch-alarm.png](cloud-watch-alarm.png)
+
+### Important Link - 
+
+* Allow only specific VPC endpoints or IP addresses to access my Amazon S3 bucket - `https://repost.aws/knowledge-center/block-s3-traffic-vpc-ip`
+* AWS CLI Document - `https://docs.aws.amazon.com/cli/latest/reference/ec2/run-instances.html`
+* AWS Policy Generator - `https://awspolicygen.s3.amazonaws.com/policygen.html`
