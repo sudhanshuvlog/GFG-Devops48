@@ -7,7 +7,7 @@
 
 ---
 
-## What I understood
+
 
 **EC2 vs Lambda — When to Use Which**
 
@@ -48,7 +48,7 @@
 
 ---
 
-## What I didn't fully get
+
 
 - **Availability Zone capacity errors:** `t2.micro` may not be available in all AZs (e.g., `ap-south-1c`). Selecting only AZs where the instance type is confirmed available avoids launch failures.  Using larger instance types (medium/large) reduces this risk. 
 - **CloudFormation** **`Ref`** **/** **`GetAtt`****:** When the template references `!Ref MySNSTopic` or retrieves an ARN, it dynamically links resources so you don't hardcode IDs — this is how SNS→SQS subscription and SQS queue policy are wired together automatically. 
@@ -57,7 +57,6 @@
 
 ---
 
-## Might show up on the exam
 
 - Lambda max execution time: **15 minutes** 
 - ALB operates at **Layer 7** (HTTP-aware); can route on path, host, method, header, query string, IP 
