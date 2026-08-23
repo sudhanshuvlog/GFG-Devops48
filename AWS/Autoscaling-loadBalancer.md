@@ -71,5 +71,12 @@
 
 * Microservices Architecture: Each microservice is hosted on separate EC2 instances in an Auto Scaling Group. ALB routes traffic to the appropriate service based on the URL path.
 
+### Target Groups
+
+![Searc Service Target group](search-service-target-group.png)
+
+![Email Service Target Group](email-service-target-group.png)
+
+### Routing rules
 
 ![ALB routing rules](ALB-Routing-Rules.png)
