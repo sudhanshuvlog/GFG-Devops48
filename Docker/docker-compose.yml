@@ -10,9 +10,9 @@ services:
       - gfgnet
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
+      WORDPRESS_DB_USER: gfg
+      WORDPRESS_DB_PASSWORD: redhat
+      WORDPRESS_DB_NAME: gfg_db
     volumes:
       - wordpress:/var/www/html
 
@@ -22,9 +22,9 @@ services:
     networks:
       - gfgnet
     environment:
-      MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepass
+      MYSQL_DATABASE: gfg_db
+      MYSQL_USER: gfg
+      MYSQL_PASSWORD: redhat
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
