@@ -70,8 +70,8 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
     * `yum install jdk-21_linux-x64_bin.rpm -y`
 
 - Start the agent and join it to the Jenkins Master Node(You will get the below commands, from Jenkins master while adding this node, Don't use the below one, They are for my server)
-    * `curl -sO http://15.252.180.147:8080/jnlpJars/agent.jar`
-    * `java -jar agent.jar -url http://15.252.180.147:8080/ -secret a7679b2648a8f93011b7c4925571034bbaf9b80bafd6904c56251c6823a3e1e9 -name worker1 -webSocket -workDir "/data" &`
+    * `curl -sO http://54.146.158.246:8080/jnlpJars/agent.jar`
+    * `java -jar agent.jar -jnlpUrl http://54.146.158.246:8080/computer/ec2/jenkins-agent.jnlp -secret 557af3ada1a128916ce4cac68d93ce7eb1b6d5e186ac18f43972697165a9f0d8 -workDir "/" &`
 
 ### Jenkins Server
 
@@ -92,3 +92,68 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 - Handling increased workload or parallel jobs might be challenging for a single machine, leading to slower build times.
 - If the master server fails or becomes unavailable, the entire CI/CD process is disrupted.
+
+### Pipeline in Jenkins
+
+- Jenkins Pipeline streamlines the execution of multiple stages within a single job, simplifying the overall workflow.
+- **Pre-requisites** - You need to install the `Pipeline plugin` in your Jenkins server.
+- Before the installation of the Pipeline plugin, the conventional approach involved running multiple jobs to handle distinct stages of a process.
+- With the installation of the Pipeline plugin, the need for managing multiple jobs is eliminated. Now, all stages can be seamlessly executed within a single job, optimizing the CI/CD pipeline.
+
+### Jenkinsfile
+
+- In Pipeline, we can define the stages in a file called `Jenkinsfile`.
+- Jenkinsfile uses Groovy language.
+- By encapsulating all stages within the Jenkinsfile, users can execute an entire workflow within a single job. This simplifies job management and enhances pipeline efficiency.
+- Example of Jenkinsfile:
+
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
+```
+
+### Jenkins Pipeline Triggers
+
+- Poll SCM - It will check the changes in the repository for every x minutes we mentioned.
+- If we use `Poll SCM` trigger, It will waste a lot of resources, It is better for the use cases for data backup, etc.
+- So we can use `Webhook` trigger, This trigger is event-driven and activates the Jenkins job only when there is a change in the repository.
+
+### Jenkins Dynamic Agent
+
+- Edit the file at `/usr/lib/systemd/system/docker.service` and replace with the content provided in `docker.service` file
+- systemctl daemon-reload
+- systemctl restart docker
+- Install Docker Plugin In Jenkins
+- Setup docker cloud in jenkins
+
+## GitHub Actions
+
+Seamless Integration:
+GitHub Actions seamlessly integrates with your GitHub repositories, allowing you to define workflows directly within your codebase.
+
+No Infrastructure Management:
+There's no need to manage infrastructure like EC2 instances or Jenkins servers. GitHub handles the underlying infrastructure, simplifying the setup process.
+
+Easy Configuration:
+Workflows are defined using YAML files within your repository, making it easy to version control and collaborate on CI/CD configurations.
+
+Event-Driven Triggers:
+GitHub Actions triggers workflows based on various events such as pushes, pull requests, issue comments, and more, ensuring your CI/CD pipeline responds dynamically to repository changes.
