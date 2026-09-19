@@ -5,3 +5,4 @@ GFG-Devops48 Batch Resources
 * LMS - https://www.geeksforgeeks.org/batch/devops-48?tab=Live
 * Feedback Form - http://feedbackgfg48.s3-website.ap-south-1.amazonaws.com/
 * Mario Game Docker Practical - https://github.com/sudhanshuvlog/MarioGameOnDocker/tree/main/mario-game
+* Python Flask App With CI-CD - https://github.com/sudhanshuvlog/GFG48-Python-FlaskApp/tree/main
