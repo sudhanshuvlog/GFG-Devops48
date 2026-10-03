@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: gfg-deployment
+  labels:
+    app: gfg-deployment-webapp
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: webapp
+  template: #pod template
+    metadata:
+      name: gfg-httpd
+      labels:
+        app: webapp
+    spec:
+      containers:
+      - name: httpd
+        image: httpd
+        ports:
+          - containerPort: 80
