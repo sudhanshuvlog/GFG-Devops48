@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongo-pvc
+spec:
+  storageClassName: local-mongo-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 0.7Gi
