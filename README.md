@@ -9,3 +9,4 @@ GFG-Devops48 Batch Resources
 * Snake Game Repo - https://github.com/sudhanshuvlog/SnakeGame
 * Github Self Hosted Runner Doc - https://medium.com/@gauravkachariya/configuring-github-self-hosted-runner-on-ec2-a-step-by-step-guide-2449326c0f7b
 * K8s MERN App Deployment - https://github.com/sudhanshuvlog/K8s-MERN-App-Deployment
+* K8s Movie Streaming App - https://github.com/sudhanshuvlog/Movie-Streaming-App-DevOps
