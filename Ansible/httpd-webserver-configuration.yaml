@@ -1,0 +1,44 @@
+- hosts: all
+  vars:
+    gfgpackages:
+      - httpd
+      - nginx
+      - php
+      - python
+      - docker
+  tasks:
+  - name: "Install relevant packages"
+    package:
+      name: " {{ item }} "
+      state: "present"
+    loop: "{{ gfgpackages }}"
+    tags:
+      - install
+      - package
+
+  - name: "copy webpages content - index.html"
+    copy:
+      src: ./index.html
+      dest: /var/www/html
+      owner: root
+      group: root
+      mode: '777'
+    tags:
+      - copy
+
+  - name: "copy httpd config file"
+    copy:
+      src: ./httpd.conf
+      dest: /etc/httpd/conf/
+    notify:
+      - restart Webserver
+    tags:
+      - copy
+      - config
+
+  handlers:
+
+    - name: "restart Webserver"
+      service:
+        name: httpd
+        state: restarted 

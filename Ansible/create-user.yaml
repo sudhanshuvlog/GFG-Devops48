@@ -1,0 +1,21 @@
+- hosts: all
+  vars:
+    user_names:
+      - dev1
+      - ram
+      - sudhanshu
+      - devops1
+      - dev1
+      - shyam
+      - eric
+  tasks:
+    - name: "gfg group"
+      group:
+        name: gfg
+        state: present
+
+    - name: "Created users in gfg group"
+      user:
+        name: "{{ item }}"
+        group: gfg
+      loop: "{{ user_names }}"

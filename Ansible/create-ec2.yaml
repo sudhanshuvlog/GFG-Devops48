@@ -1,0 +1,44 @@
+- hosts: localhost
+  vars_files:
+    - ec2_variables.yaml
+    - aws_credentials.yaml
+  tasks:
+    - name: "install pip3"
+      package:
+        name: python3-pip
+        state: present
+
+    - name: "install boto3"
+      pip:
+        name: boto3
+
+    - name: "Provision Ec2 Server"
+      amazon.aws.ec2_instance:
+        access_key: "{{ access_key }}"
+        secret_key: "{{ secret_key }}"
+        region: "{{ region }}"
+        security_group: "{{ security_group }}"
+        instance_type: "{{ instance_type }}"
+        name: "{{ name }}"
+        key_name: "{{ key_name }}"
+        image_id: "{{ image_id }}"
+        subnet_id: "{{ vpc_subnet_id }}"
+        count: "{{ count }}"
+      register: ec2_data
+
+    - name: "print the newly launched ec2 instance details"
+      debug:
+        var: ec2_data
+
+    - name: "retreive the ip address of the newly launched ex2 instances"
+      set_fact:
+        ec2_ips: "{{ ec2_data.instances | map(attribute='private_ip_address') | list }}"
+
+    - name: "print the ip of ec2 instances"
+      debug:
+        var: ec2_ips
+
+    - name: "run jinja template to create dynamic inventory file"
+      template:
+        src: inventory.j2
+        dest: inventory

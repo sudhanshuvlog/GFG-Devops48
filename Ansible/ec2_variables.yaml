@@ -1,0 +1,8 @@
+region: ap-south-1
+instance_type: t2.micro
+name: AnsibleLaunchedEc2Server
+key_name: ansible-gfg-48-prac
+security_group: default
+image_id: ami-04394a3a96907e9ec
+vpc_subnet_id: subnet-04c1ed6ba9c55ffd7
+count: 1
