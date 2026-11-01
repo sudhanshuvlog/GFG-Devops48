@@ -12,3 +12,4 @@ GFG-Devops48 Batch Resources
 * K8s Movie Streaming App - https://github.com/sudhanshuvlog/Movie-Streaming-App-DevOps
 * Multi-User-ChatApp-Devops - https://github.com/sudhanshuvlog/Multi-User-ChatApp-Devops/tree/master
 * K8s Multi Node Cluster Configuration With Ansible - https://github.com/sudhanshuvlog/kubernetes-multinode-cluster-ansible-aws/tree/main
+* Devops Master Pipeline End to End - https://github.com/sudhanshuvlog/Devops-Master-Pipeline-End-To-End
