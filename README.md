@@ -7,9 +7,13 @@ GFG-Devops48 Batch Resources
 * Mario Game Docker Practical - https://github.com/sudhanshuvlog/MarioGameOnDocker/tree/main/mario-game
 * Python Flask App With CI-CD - https://github.com/sudhanshuvlog/GFG48-Python-FlaskApp/tree/main
 * Snake Game Repo - https://github.com/sudhanshuvlog/SnakeGame
+* Sample Java App Repo CI-CD - https://github.com/Trainersudhanshu/sample-java-app/tree/main#
 * Github Self Hosted Runner Doc - https://medium.com/@gauravkachariya/configuring-github-self-hosted-runner-on-ec2-a-step-by-step-guide-2449326c0f7b
 * K8s MERN App Deployment - https://github.com/sudhanshuvlog/K8s-MERN-App-Deployment
 * K8s Movie Streaming App - https://github.com/sudhanshuvlog/Movie-Streaming-App-DevOps
 * Multi-User-ChatApp-Devops - https://github.com/sudhanshuvlog/Multi-User-ChatApp-Devops/tree/master
 * K8s Multi Node Cluster Configuration With Ansible - https://github.com/sudhanshuvlog/kubernetes-multinode-cluster-ansible-aws/tree/main
 * Devops Master Pipeline End to End - https://github.com/sudhanshuvlog/Devops-Master-Pipeline-End-To-End
+* Microservices App - https://github.com/sudhanshuvlog/MicroservicesApp
+* K8s Istio ServiceMesh - https://github.com/sudhanshuvlog/Istio-ServiceMesh-Proj
+* Devops 110 Interview Questions - https://docs.google.com/document/d/1ozERaBy6NHabVChsMG3ewtSnSZYWs8WDg4QL1IRW8Ts/edit?usp=sharing
